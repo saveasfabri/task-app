@@ -1,6 +1,20 @@
-# TASK APP
+
+|<img width="90" src="./src/assets/images/logo.svg">|<h1>TASK APP</h1> |
+| :---: | :---: |
+
 
 App to create tasks made with React and mobile first layout.
+
+## Technologies used
+
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)  ![CRA](https://img.shields.io/badge/Create%20React%20App-%2320232a.svg?style=for-the-badge&logo=Create%20React%20App&logoColor=%2361DAFB)
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)  ![Redux](https://img.shields.io/badge/redux-blueviolet.svg?style=for-the-badge&logo=redux&logoColor=%ffffffFB)    ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![SASS](https://img.shields.io/badge/sass-inactive.svg?style=for-the-badge&logo=sass)  
+
+
+
+
+---
 
 ## Getting Started with Create React App
 
