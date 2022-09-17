@@ -23,14 +23,21 @@
 .App header .App-bg-header {
   width: 100%;
   height: 95px;
-  background-color: #01a0c6;
+  background-image: url(../assets/images/bar_mb.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  overflow: hidden;
+  /* background-color: $sky-blue; */
 }
 .App header .App-logo {
   position: absolute;
-  width: 130px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 95px;
+  height: 95px;
+  background-image: url(../assets/images/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .App main {
   grid-area: main;
@@ -54,14 +61,26 @@
     padding: 2vw 3vw 0 3vw;
     grid-template-rows: 1fr 5fr 1fr;
   }
-  .App .App-header {
-    height: 150px;
+  .App header .App-bg-header {
+    background-image: url(../assets/images/bar_desk.png);
   }
-  .App .App-header .App-bg-header {
-    height: 130px;
+  .App header .App-bg-header:hover {
+    filter: brightness(0.8);
   }
-  .App .App-header .App-logo {
-    width: 180px;
+  .App header .App-logo {
+    width: 100px;
+    height: 100px;
+    transition: 0.4s;
+  }
+  .App header .App-logo:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    filter: brightness(1.2);
+    background-image: url(../assets/images/logo_ok.png);
+    transition: none;
+  }
+  .App header .App-logo:active {
+    background-image: url(../assets/images/logo_active.png);
   }
 }
 /* ***** Colors ***** */
