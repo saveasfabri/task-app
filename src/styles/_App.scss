@@ -5,7 +5,7 @@
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background-color: #ec9625;
+  background-color: #df4f4f;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -23,22 +23,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    
-    .app-bg-header{
-      width: 100%;
-      height: 95px;
-      background-image: url(../assets/images/bar_mb.png);
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: center;
-      overflow: hidden;
-      /* background-color: $sky-blue; */
-    }
+
     .app-logo {
       width: 95px;
       height: 95px;
-    }
-  }
+    };
+  };
   main {
     grid-area: main;
     width: 90%;
@@ -48,12 +38,8 @@
     background-color: #fff;
     box-shadow: -6px 6px 10px rgb(133, 36, 36);
     justify-self: flex-end;
-    z-index: 1;
-    h1 {
-      text-align: center;
-      margin-top: 20px;
-    }    
-  }
+    z-index: 1;    
+  };
   footer{
     position: fixed;
     width: 95%;
@@ -71,10 +57,10 @@
       width: 100%;
       height: 100%;
       border-radius: 15px 0 0 15px;
-      background-color: #153944;
+      background-color: #3187a1;
       box-shadow: 0px 6px 10px rgba(87, 87, 87, 0.486);
-    }    
-  }
+    };    
+  };
   .bg-footer-2 {//para lograr somgra bajo el main
     position: fixed;
     width: 95%;
@@ -85,23 +71,17 @@
     align-self: flex-start;
     background-color: #9b2d14;
     box-shadow: -6px 6px 10px rgb(133, 36, 36);
-  }
-}
+  };
+};
 
 /* ************************ Media Query 540px *************************/
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 540px) {
   .app {
     grid-template-rows: 1fr 5fr 90px;
     
     header {
       padding: 2vw 0;
-      .app-bg-header{
-        
-        background-image: url(../assets/images/bar_desk.png);
-        &:hover {
-          filter: brightness(.8);
-        }
-      }
+
       .app-logo {
         width: 100px;
         height: 100px;
@@ -110,14 +90,14 @@
           cursor: pointer;
           transform:scale(1.3);
           background-image: url(../assets/images/logo_ok.png);
-        }
+        };
         &:active {
           background-image: url(../assets/images/logo_active.png);
-        }
-      }
-    }
+        };
+      };
+    };
     main {
       padding: 0 3vw;
-    }
-  }
-}
+    };
+  };
+};

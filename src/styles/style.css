@@ -9,7 +9,7 @@
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background-color: #ec9625;
+  background-color: #df4f4f;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -23,16 +23,6 @@
   position: relative;
   display: flex;
   align-items: center;
-}
-.App header .app-bg-header {
-  width: 100%;
-  height: 95px;
-  background-image: url(../assets/images/bar_mb.png);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  overflow: hidden;
-  /* background-color: $sky-blue; */
 }
 .App header .app-logo {
   width: 95px;
@@ -48,10 +38,6 @@
   box-shadow: -6px 6px 10px rgb(133, 36, 36);
   justify-self: flex-end;
   z-index: 1;
-}
-.App main h1 {
-  text-align: center;
-  margin-top: 20px;
 }
 .App footer {
   position: fixed;
@@ -70,7 +56,7 @@
   width: 100%;
   height: 100%;
   border-radius: 15px 0 0 15px;
-  background-color: #153944;
+  background-color: #3187a1;
   box-shadow: 0px 6px 10px rgba(87, 87, 87, 0.486);
 }
 .App .bg-footer-2 {
@@ -86,18 +72,12 @@
 }
 
 /* ************************ Media Query 540px *************************/
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 540px) {
   .app {
     grid-template-rows: 1fr 5fr 90px;
   }
   .app header {
     padding: 2vw 0;
-  }
-  .app header .app-bg-header {
-    background-image: url(../assets/images/bar_desk.png);
-  }
-  .app header .app-bg-header:hover {
-    filter: brightness(0.8);
   }
   .app header .app-logo {
     width: 100px;
@@ -120,10 +100,27 @@
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
 .task {
+  width: 100%;
   border: 1px solid grey;
   padding: 15px;
   border-radius: 10px;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task .date-form {
+  color: blue;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.task .title-task {
+  height: 100%;
+  font-size: 1.2em;
+  background-color: aqua;
+  flex-wrap: wrap;
 }
 .task .icon-delete {
   font-size: 30px;
@@ -141,22 +138,31 @@
 }
 .form .input-form {
   width: 100%;
-  height: 40px;
+  height: 50px;
   font-size: 1em;
+  color: #476b75;
   padding: 0 15px;
   border-radius: 10px;
-  margin-top: 15px;
+  border: none;
+  margin-top: 30px;
+  background-color: #f7e8e5;
 }
 .form .btn-form {
   color: #fff;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 400;
   padding: 10px 15px;
   border-radius: 10px;
   margin-top: 15px;
   background-color: #194350;
 }
 
+/* ************************ Media Query 540px *************************/
+@media screen and (min-width: 540px) {
+  .form .input-form:hover {
+    background-color: #f8d8d2;
+  }
+}
 /* ***** Colors ***** */
 /* ***** text ***** */
 /* ***** Backgrounds ***** */

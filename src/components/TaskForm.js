@@ -5,7 +5,8 @@ const TaskForm = ({sendTask}) => {
 
   const [input, setInput] = useState("");
 
-  const date = new Date();
+  const dayDate = new Date();
+  const monthDate = new Date();
 
   // WIP - handleChange
   const handleChange = (event) => {
@@ -21,7 +22,8 @@ const TaskForm = ({sendTask}) => {
     const newTask = {
       id: uuidv4(),
       title: input,
-      date: (date.getDate() + "/" + (date.getMonth() +1) + "/" + date.getFullYear()),
+      dayDate: `${(dayDate.getDate())}`.padStart(2,'0'),//días menores a 10 se ven 09
+      monthDate: `${(monthDate.getMonth() +1)}`.padStart(2,'0'),//meses menores a 10 se ven 09
       completed: false,
     };
     sendTask(newTask);
@@ -32,6 +34,7 @@ const TaskForm = ({sendTask}) => {
     <form className="form" onSubmit={handleSubmit}>
       <input
         className="input-form"
+        maxlength="20"
         type="text"
         name="text"
         placeholder="Write your task..."

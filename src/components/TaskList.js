@@ -29,8 +29,8 @@ const TaskList = () => {
               key={task.id}
               id={task.id}
               title={task.title}
-              descrition={task.date}
-              date={task.date}
+              dayDate={task.dayDate}
+              monthDate={task.monthDate}
               completed={task.completed}
               deleteTask={deleteTask}
             />
