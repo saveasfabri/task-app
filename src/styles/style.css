@@ -6,14 +6,15 @@
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
 .App {
+  position: relative;
   width: 100vw;
   min-height: 100vh;
-  background-color: #ed455c;
+  background-color: #ec9625;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   display: grid;
-  grid-template-rows: 110px 5fr 120px;
+  grid-template-rows: 110px 5fr;
   grid-template-areas: "header" "main" "footer";
 }
 .App header {
@@ -39,25 +40,49 @@
 }
 .App main {
   grid-area: main;
-  width: 80%;
+  width: 90%;
   height: 100%;
   padding: 0 6vw;
   border-radius: 15px 0 0 0;
-  border: 1px solid rgba(255, 250, 250, 0.733); /* Borrar **************** */
   background-color: #fff;
+  box-shadow: -6px 6px 10px rgb(133, 36, 36);
   justify-self: flex-end;
+  z-index: 1;
 }
 .App main h1 {
   text-align: center;
   margin-top: 20px;
 }
 .App footer {
-  grid-area: footer;
-  width: 90%;
-  height: 90%;
-  background-color: grey;
+  position: fixed;
+  width: 95%;
+  height: 80px;
+  bottom: 15px;
+  border-radius: 15px 0 0 15px;
   justify-self: flex-end;
   align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.App footer .bg-footer-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+  background-color: #153944;
+  box-shadow: 0px 6px 10px rgba(87, 87, 87, 0.486);
+}
+.App .bg-footer-2 {
+  position: fixed;
+  width: 95%;
+  height: 80px;
+  bottom: 15px;
+  border-radius: 15px 0 0 15px;
+  justify-self: flex-end;
+  align-self: flex-start;
+  background-color: #9b2d14;
+  box-shadow: -6px 6px 10px rgb(133, 36, 36);
 }
 
 /* ************************ Media Query 540px *************************/
@@ -108,8 +133,28 @@
 /* ***** Colors ***** */
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
-.taskForm {
-  background-color: aqua;
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form .input-form {
+  width: 100%;
+  height: 40px;
+  font-size: 1em;
+  padding: 0 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.form .btn-form {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  background-color: #194350;
 }
 
 /* ***** Colors ***** */

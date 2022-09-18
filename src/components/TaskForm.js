@@ -29,18 +29,16 @@ const TaskForm = ({sendTask}) => {
   };
 
   return (
-    <div className="taskForm">
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          className="input-form"
-          type="text"
-          name="text"
-          placeholder="Write your task..."
-          onChange={handleChange}
-        />
-        <button className="btn-form">Add Task</button>
-      </form>
-    </div>
+    <form className="form" onSubmit={handleSubmit}>
+      <input
+        className="input-form"
+        type="text"
+        name="text"
+        placeholder="Write your task..."
+        onChange={handleChange}
+      />
+      <button className="btn-form">Add Task</button>
+    </form>
   );
 };
 
