@@ -7,11 +7,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div className="App-bg-header" />
-        <div className="App-logo" alt="logo" />
+        {/* <div className="app-bg-header" /> */}
+        <img className="app-logo" src='../src/assets/images/logo.png' alt="logo" />
       </header>
       <main>
-        <h1>Lista de Tareas</h1>
+        <h1>Task List</h1>
         <TaskList />
       </main>
       <footer>

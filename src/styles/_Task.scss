@@ -1,1 +1,12 @@
 @import "variables";
+
+.task {
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  .icon-delete {
+    font-size: 30px;
+    fill: $sky-blue;
+  }
+}

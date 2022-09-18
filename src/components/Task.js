@@ -1,8 +1,16 @@
+import { TiDelete } from 'react-icons/ti';
 
-const Task = () => {
+const Task = ({ id, title, date, completed, deleteTask }) => {
+
   return (
-    <div>
-      <h3>Task</h3>
+    <div className="task">
+      {/* <p>{id}</p> */}
+      <h2 className='title-task'>{title}</h2>
+      <p className='date-task'>{date}</p>
+      <p>{completed}</p>
+      <div onClick={()=>deleteTask(id)}>
+        <TiDelete className='icon-delete'/>
+      </div>
     </div>
   );
 }
