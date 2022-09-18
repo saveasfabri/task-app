@@ -8,15 +8,18 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img className="app-logo" src={logo} alt="logo" />
+        <img className="logo" src={logo} alt="logo" />
+        <h1 className='title-App'>TASK APP</h1>
       </header>
+
       <main>
         <TaskList />        
       </main>
-      <footer>
-        <div className="bg-footer-1"/>      
 
+      <footer>
+        <div className="bg-footer-1"/>
       </footer>
+
       <div className="bg-footer-2"/>
     </div>
   );

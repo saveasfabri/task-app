@@ -10,19 +10,24 @@
     height: 50px;
     font-size: 1em;
     color: #476b75;
-    padding: 0 15px;
-    border-radius: 10px;
+    padding: 0 20px;
+    border-radius:  0 15px 15px 0;
     border: none;
-    margin-top: 30px;
-    background-color: #f7e8e5;    
+    margin-top: 50px;
+    background-color: #f7e8e5;
+    &:focus {
+      outline: none;
+      background-color: #fdc6be;
+    }
   };
   .btn-form {
     color: #fff;
     font-size: 1.2em;
     font-weight: 400;
-    padding: 10px 15px;
+    padding: 8px 15px;
+    border: none;
     border-radius: 10px;    
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: #194350;
   };
 };

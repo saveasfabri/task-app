@@ -24,26 +24,39 @@
     display: flex;
     align-items: center;
 
-    .app-logo {
-      width: 95px;
-      height: 95px;
+    .logo {
+      width: 75px;
+      height: 75px;
+      margin-left: 20px; 
+    };
+    .title-App {
+      color: #fff;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 3em;
+      margin-left: 20px
     };
   };
   main {
     grid-area: main;
-    width: 90%;
+    width: 85%;
     height: 100%;
-    padding: 0 6vw;
-    border-radius: 15px 0 0 0 ;
+    padding: 0 6vw 0 0;
+    border-radius: 40px 0 0 0 ;
     background-color: #fff;
-    box-shadow: -6px 6px 10px rgb(133, 36, 36);
     justify-self: flex-end;
-    z-index: 1;    
+    z-index: 1;
+    .title-taskList {
+      color: #df4f4f;
+      font-size: 1.3em;
+      font-weight: 200;
+      margin-top: 30px;
+      margin-left: 25px
+    }
   };
   footer{
     position: fixed;
     width: 95%;
-    height: 80px;
+    height: 75px;
     bottom: 15px;
     border-radius: 15px 0 0 15px;
     justify-self: flex-end;
@@ -56,21 +69,21 @@
       position:absolute;
       width: 100%;
       height: 100%;
-      border-radius: 15px 0 0 15px;
-      background-color: #3187a1;
-      box-shadow: 0px 6px 10px rgba(87, 87, 87, 0.486);
+      border-radius: 20px 0 0 20px;
+      background-color: #194350;
+      box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.486);
     };    
   };
   .bg-footer-2 {//para lograr somgra bajo el main
     position: fixed;
-    width: 95%;
-    height: 80px;
+    width: 94%;
+    height: 74px;
     bottom: 15px;
-    border-radius: 15px 0 0 15px;
+    border-radius: 20px 0 0 20px;
     justify-self: flex-end;
     align-self: flex-start;
     background-color: #9b2d14;
-    box-shadow: -6px 6px 10px rgb(133, 36, 36);
+    box-shadow: -6px 6px 6px rgba(133, 36, 36, 0.438);
   };
 };
 

@@ -9,9 +9,9 @@ const Task = ({ id, title, dayDate, monthDate, completed, deleteTask }) => {
         <p className='monthDate'>{monthDate}</p>
       </div>
       <h2 className='title-task'>{title}</h2>
-      <div onClick={()=>deleteTask(id)}>
+      <div className='icon-delete-task' onClick={()=>deleteTask(id)}>
 
-        <TiDelete className='icon-delete'/>
+        <TiDelete className='icon'/>
         
       </div>
       <p>{completed}</p>

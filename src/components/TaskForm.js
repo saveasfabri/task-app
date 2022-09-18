@@ -8,14 +8,20 @@ const TaskForm = ({sendTask}) => {
   const dayDate = new Date();
   const monthDate = new Date();
 
-  // WIP - handleChange
   const handleChange = (event) => {
-    setInput(event.target.value)
+    
+    const Input = event.target.value;
+    function capitalizeTheFirstLetter(input) {
+      return input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+    }
+    capitalizeTheFirstLetter(Input)
+
+    setInput(capitalizeTheFirstLetter(Input))
     /* console.log("🚀 ~ handleChange ~ event", event)
     console.log("🚀 ~ handleChange ~ event.target", event.target)
     console.log("🚀 ~ handleChange ~ event.target.value", event.target.value) */
   }
-  // WIP - handleSubmit
+
   const handleSubmit = (event) => {
     event.preventDefault();
     /* console.log("🚀 ~ handleSubmit ~ event", event) */
@@ -34,7 +40,7 @@ const TaskForm = ({sendTask}) => {
     <form className="form" onSubmit={handleSubmit}>
       <input
         className="input-form"
-        maxlength="20"
+        maxLength="30"
         type="text"
         name="text"
         placeholder="Write your task..."

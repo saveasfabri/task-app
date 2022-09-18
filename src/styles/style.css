@@ -24,25 +24,38 @@
   display: flex;
   align-items: center;
 }
-.App header .app-logo {
-  width: 95px;
-  height: 95px;
+.App header .logo {
+  width: 75px;
+  height: 75px;
+  margin-left: 20px;
+}
+.App header .title-App {
+  color: #fff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 3em;
+  margin-left: 20px;
 }
 .App main {
   grid-area: main;
-  width: 90%;
+  width: 85%;
   height: 100%;
-  padding: 0 6vw;
-  border-radius: 15px 0 0 0;
+  padding: 0 6vw 0 0;
+  border-radius: 40px 0 0 0;
   background-color: #fff;
-  box-shadow: -6px 6px 10px rgb(133, 36, 36);
   justify-self: flex-end;
   z-index: 1;
+}
+.App main .title-taskList {
+  color: #df4f4f;
+  font-size: 1.3em;
+  font-weight: 200;
+  margin-top: 30px;
+  margin-left: 25px;
 }
 .App footer {
   position: fixed;
   width: 95%;
-  height: 80px;
+  height: 75px;
   bottom: 15px;
   border-radius: 15px 0 0 15px;
   justify-self: flex-end;
@@ -55,20 +68,20 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 15px 0 0 15px;
-  background-color: #3187a1;
-  box-shadow: 0px 6px 10px rgba(87, 87, 87, 0.486);
+  border-radius: 20px 0 0 20px;
+  background-color: #194350;
+  box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.486);
 }
 .App .bg-footer-2 {
   position: fixed;
-  width: 95%;
-  height: 80px;
+  width: 94%;
+  height: 74px;
   bottom: 15px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 20px 0 0 20px;
   justify-self: flex-end;
   align-self: flex-start;
   background-color: #9b2d14;
-  box-shadow: -6px 6px 10px rgb(133, 36, 36);
+  box-shadow: -6px 6px 6px rgba(133, 36, 36, 0.438);
 }
 
 /* ************************ Media Query 540px *************************/
@@ -100,31 +113,60 @@
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
 .task {
+  position: relative;
   width: 100%;
-  border: 1px solid grey;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
+  height: 60px;
+  border-radius: 0 15px 15px 0;
+  margin-top: 30px;
+  background-color: rgba(25, 67, 80, 0.062745098);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .task .date-form {
-  color: blue;
+  position: absolute;
+  left: -35px;
+  width: 10%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.task .date-form .dayDate {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+  border-bottom: 2px solid #194350;
+}
+.task .date-form .monthDate {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
 }
 .task .title-task {
-  height: 100%;
-  font-size: 1.2em;
-  background-color: aqua;
-  flex-wrap: wrap;
+  width: 90%;
+  color: #194350;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 15px;
+  overflow-wrap: anywhere;
 }
-.task .icon-delete {
+.task .icon-delete-task {
+  width: 10%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  background-color: #df7979;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task .icon-delete-task .icon {
   font-size: 30px;
-  fill: #01a0c6;
+  fill: #fff;
 }
 
 /* ***** Colors ***** */
@@ -141,19 +183,24 @@
   height: 50px;
   font-size: 1em;
   color: #476b75;
-  padding: 0 15px;
-  border-radius: 10px;
+  padding: 0 20px;
+  border-radius: 0 15px 15px 0;
   border: none;
-  margin-top: 30px;
+  margin-top: 50px;
   background-color: #f7e8e5;
+}
+.form .input-form:focus {
+  outline: none;
+  background-color: #fdc6be;
 }
 .form .btn-form {
   color: #fff;
   font-size: 1.2em;
   font-weight: 400;
-  padding: 10px 15px;
+  padding: 8px 15px;
+  border: none;
   border-radius: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
   background-color: #194350;
 }
 

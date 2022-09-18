@@ -1,29 +1,59 @@
 @import "variables";
 
 .task {
+  position: relative;
   width: 100%;
-  border: 1px solid grey;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
+  height: 60px;
+  border-radius: 0 15px 15px 0;
+  margin-top: 30px;
+  background-color: #19435010;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  .date-form { 
-    color:blue; height: 100%;
+  .date-form {
+    position: absolute;
+    left: -35px;
+    width: 10%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    justify-content: center;
+    z-index: 2;
+    .dayDate {
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: 500;
+      font-family: 'Rajdhani', sans-serif;
+    border-bottom: 2px solid #194350;
+    }
+    .monthDate {
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: 500;
+      font-family: 'Rajdhani', sans-serif;
+    }
+  };
   .title-task {
+    width: 90%;
+    color: #194350;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 15px;
+    overflow-wrap: anywhere;
+  };
+  .icon-delete-task {
+    width: 10%;
     height: 100%;
-    font-size: 1.2em;
-    background-color: aqua;
-    flex-wrap: wrap;
-  }
-  .icon-delete {
-    font-size: 30px;
-    fill: $sky-blue;
+    border-radius: 0 15px 15px 0;
+    background-color: #df7979;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      font-size: 30px;
+      fill: #fff;
+    };
   };
 };
