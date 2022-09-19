@@ -9,7 +9,7 @@
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background-color: #df4f4f;
+  background-color: #f3863e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,16 +68,65 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 20px 0 0 20px;
+  border-radius: 35px 0 0 35px;
   background-color: #194350;
-  box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.486);
+  box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.699);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.App footer .bg-footer-1 .logo-footer {
+  width: 55px;
+  height: 55px;
+  margin-left: 12px;
+}
+.App footer .bg-footer-1 .social-footer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.App footer .bg-footer-1 .social-footer .name-footer {
+  height: 50%;
+  color: rgba(255, 255, 255, 0.2823529412);
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+.App footer .bg-footer-1 .social-footer .container-social {
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.App footer .bg-footer-1 .social-footer .container-social .github {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.App footer .bg-footer-1 .social-footer .container-social .github .icon-gh {
+  font-size: 1.7em;
+  fill: #568a93;
+  margin-left: 20px;
+}
+.App footer .bg-footer-1 .social-footer .container-social .linkedin {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.App footer .bg-footer-1 .social-footer .container-social .linkedin .icon-lk {
+  font-size: 1.7em;
+  fill: #568a93;
+  margin-right: 20px;
 }
 .App .bg-footer-2 {
   position: fixed;
   width: 94%;
   height: 74px;
   bottom: 15px;
-  border-radius: 20px 0 0 20px;
+  border-radius: 35px 0 0 35px;
   justify-self: flex-end;
   align-self: flex-start;
   background-color: #9b2d14;
@@ -174,6 +223,7 @@
 /* ***** Backgrounds ***** */
 .form {
   width: 100%;
+  margin-left: 6vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,7 +234,7 @@
   font-size: 1em;
   color: #476b75;
   padding: 0 20px;
-  border-radius: 0 15px 15px 0;
+  border-radius: 15px 0 0 15px;
   border: none;
   margin-top: 50px;
   background-color: #f7e8e5;
@@ -194,7 +244,7 @@
   background-color: #fdc6be;
 }
 .form .btn-form {
-  color: #fff;
+  color: #84b3bb;
   font-size: 1.2em;
   font-weight: 400;
   padding: 8px 15px;

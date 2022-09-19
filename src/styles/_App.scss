@@ -5,7 +5,7 @@
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background-color: #df4f4f;
+  background-color: #f3863e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,9 +69,60 @@
       position:absolute;
       width: 100%;
       height: 100%;
-      border-radius: 20px 0 0 20px;
+      border-radius: 35px 0 0 35px;
       background-color: #194350;
-      box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.486);
+      box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.699);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo-footer {
+        width: 55px;
+        height: 55px;
+        margin-left: 12px
+      };
+      .social-footer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .name-footer {
+          height: 50%;
+          color: #ffffff48;
+          font-size: 1em;
+          display: flex;
+          align-items: center;
+        };
+        .container-social {
+          width: 100%;
+          height: 50%;
+          display:flex;
+          .github {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            .icon-gh {
+              font-size: 1.7em;
+              fill: #568a93;
+              margin-left: 20px;
+            }
+          }
+          .linkedin {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            .icon-lk {
+              font-size: 1.7em;
+              fill: #568a93;
+              margin-right: 20px;
+            }
+          }
+        };
+      };
     };    
   };
   .bg-footer-2 {//para lograr somgra bajo el main
@@ -79,7 +130,7 @@
     width: 94%;
     height: 74px;
     bottom: 15px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 35px 0 0 35px;
     justify-self: flex-end;
     align-self: flex-start;
     background-color: #9b2d14;

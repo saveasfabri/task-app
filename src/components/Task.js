@@ -3,7 +3,7 @@ import { TiDelete } from 'react-icons/ti';
 const Task = ({ id, title, dayDate, monthDate, completed, deleteTask }) => {
 
   return (
-    <div className="task">
+    <div className="task animate__animated animate__bounceInDown animate__faster">
       <div className='date-form'>
         <p className='dayDate'>{dayDate}</p>
         <p className='monthDate'>{monthDate}</p>
