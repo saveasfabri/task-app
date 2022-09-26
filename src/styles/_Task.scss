@@ -4,12 +4,13 @@
   position: relative;
   width: 100%;
   height: 60px;
-  border-radius: 0 15px 15px 0;
-  margin-top: 30px;
+  margin-bottom: 15px;
+  border-radius: 0 25px 25px 0;
   background-color: #19435010;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #e28f8f;
 
   .date-form {
     position: absolute;
@@ -36,18 +37,18 @@
     }
   };
   .title-task {
-    width: 90%;
+    width: 75%;
     color: #194350;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 500;
     margin: 15px;
     overflow-wrap: anywhere;
   };
   .icon-delete-task {
-    width: 10%;
+    width: 25%;
     height: 100%;
-    border-radius: 0 15px 15px 0;
-    background-color: #df7979;
+    border-radius: 0 25px 25px 0;
+    background-color: #e28f8f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,4 +57,29 @@
       fill: #fff;
     };
   };
+};
+
+/* ************************ Media Query 540px *************************/
+@media screen and (min-width: 540px) {
+  .task {
+    width: 90%;
+    .date-form {
+      position: relative;
+      left: 0;
+    }
+  };
+};
+
+
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+
+    .task {
+      width: 90%;
+      height: 50px;
+      .date-form {
+        position: relative;
+        left: 0;
+      }
+    };
 };

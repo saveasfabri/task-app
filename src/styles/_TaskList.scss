@@ -1,5 +1,58 @@
 @import "variables";
 
 .main-taskList {
-  margin-bottom: 100px;
-}
+  height: 100%;
+  position: relative;
+  margin-bottom: 80px;
+  .container-main-tasks {
+    margin-top: 25px;
+  };
+};
+
+/* ************************ Media Query 540px *************************/
+@media screen and (min-width: 540px) {
+  .main-taskList {
+    margin-bottom: 10px;
+  };
+};
+
+
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+
+  .main-taskList {
+    display: flex;
+
+    overflow-y: scroll;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  };
+  &::-webkit-scrollbar:vertical {
+    width:10px;
+  };
+  ::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+  };
+  &::-webkit-scrollbar:horizontal {
+    height: 10px;
+  };
+  ::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  };
+  .contenedor::-webkit-scrollbar-track {
+    border-radius: 10px;  
+  };
+  .container-main-tasks {
+    margin-top: 30px
+  };
+    
+    .container-main-tasks {
+      width: 50%;
+      height: auto;
+      margin-top: 50px;
+      
+    };
+  };
+};

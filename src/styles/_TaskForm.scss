@@ -2,45 +2,74 @@
 
 .form {
   width: 100%;
-  margin-left: 6vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .input-form {
-    width: 100%;
-    height: 50px;
-    font-size: 1em;
-    color: #476b75;
-    padding: 0 20px;
-    border-radius:  15px 0 0 15px;
-    border: none;
-    margin-top: 50px;
-    background-color: #f7e8e5;
-    &:focus {
-      outline: none;
-      background-color: #fdc6be;
-    }
-  };
-  .btn-form {
-    color: #84b3bb;
-    font-size: 1.2em;
-    font-weight: 400;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 10px;    
-    margin-top: 10px;
-    background-color: #194350;
+  margin-left: 6vw;    
+  .container-input-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .input-form {
+      width: 100%;
+      height: 50px;
+      font-size: 1em;
+      color: #476b75;
+      padding: 0 20px;
+      border-radius:  20px 0 0 20px;
+      border: none;
+      margin-top: 50px;
+      background: rgb(255,249,198);
+      background: linear-gradient(90deg, #fcf4c2 0%, #f89d9d 100%);
+      &:focus {
+        outline: none;
+        background: linear-gradient(90deg, #fcf4c2, #df7979 100%);
+      }
+    };
+    .btn-form {
+      color: #84b3bb;
+      font-size: 1.2em;
+      font-weight: 400;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 10px;    
+      margin-top: 10px;
+      background-color: #194350;
+      &:active {
+        background-color: #36768b;
+        transform: scale(.9);
+      }
+    };
   };
 };
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
   .form {
-    .input-form {
-      &:hover {
-        background-color: #f8d8d2;
+    margin-left: 0;
+    .container-input-btn {
+      .input-form {
+        &:hover {
+          background-color: #f8d8d2;
+        };
       };
+    };
+  };
+};
+
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+  .form {
+    position: relative;
+    width: 50%;
+    height: auto;
+      .input-form {
+        width: 80%;
+      };
+    .container-input-btn {
+      width: 35%;
+      margin-left: 3vw;
+      position: fixed;
+      .input-form {
+        width: 100%;
+      }
     };
   };
 };

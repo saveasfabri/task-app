@@ -35,16 +35,18 @@ const TaskForm = ({sendTask}) => {
   };
   
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <input
-        className="input-form"
-        maxLength="30"
-        type="text"
-        name="text"
-        placeholder="Write your task..."
-        onChange={handleChange}
-      />
-      <button className="btn-form">Add Task</button>
+    <form className="form" onSubmit={handleSubmit} autoComplete="off">
+      <div className="container-input-btn">
+        <input
+          className="input-form"
+          maxLength="40"
+          type="text"
+          name="text"
+          placeholder="Write your task..."
+          onChange={handleChange}
+        />
+        <button className="btn-form">Add Task</button>
+        </div>
     </form>
   );
 };

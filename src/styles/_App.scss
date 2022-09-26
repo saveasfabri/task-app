@@ -13,8 +13,7 @@
   grid-template-rows:110px 5fr;
   grid-template-areas: 
   "header"
-  "main"
-  "footer";
+  "main";
 
 
   header {
@@ -25,8 +24,8 @@
     align-items: center;
 
     .logo {
-      width: 75px;
-      height: 75px;
+      width: 60px;
+      height: auto;
       margin-left: 20px; 
     };
     .title-App {
@@ -45,13 +44,13 @@
     background-color: #fff;
     justify-self: flex-end;
     z-index: 1;
-    .title-taskList {
+    /* .title-taskList {
       color: #df4f4f;
       font-size: 1.3em;
       font-weight: 200;
       margin-top: 30px;
       margin-left: 25px
-    }
+    } */
   };
   footer{
     position: fixed;
@@ -90,7 +89,7 @@
         justify-content: center;
 
         .name-footer {
-          height: 50%;
+          height: 30%;
           color: #ffffff48;
           font-size: 1em;
           display: flex;
@@ -100,6 +99,7 @@
           width: 100%;
           height: 50%;
           display:flex;
+          align-items: center;
           .github {
             width: 50%;
             display: flex;
@@ -140,13 +140,13 @@
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
-  .app {
+  .App {
     grid-template-rows: 1fr 5fr 90px;
     
     header {
       padding: 2vw 0;
 
-      .app-logo {
+      .logo {
         width: 100px;
         height: 100px;
         transition: transform .3s ease;
@@ -164,4 +164,63 @@
       padding: 0 3vw;
     };
   };
+};
+
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+
+  .App {
+    height: 100vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 90px 6fr 1fr;
+    align-items:unset;
+
+    header {
+      .logo {
+        width: 70px;
+        height: auto;
+      }
+    };
+    main {
+      height: 100%;
+      overflow: hidden
+    };
+    footer {
+      position: relative;
+      bottom: 0;
+      grid-area: footer;
+
+      .bg-footer-1 {
+        position:relative;
+        .social-footer {
+          width: 30%;
+          flex-direction: row;
+          justify-content: flex-end;
+          .name-footer {
+            width: 50%
+          };
+          .container-social {
+            width: 50%;
+            justify-content: flex-start;
+            .github {
+              justify-content: flex-start;
+              .icon-gh {
+                margin-left: 0
+              }
+            };
+            .linkedin {
+              justify-content: flex-start
+            }
+          };
+
+        }
+      };
+    };
+    .bg-footer-2 {
+      display: none
+    }
+  };  
 };

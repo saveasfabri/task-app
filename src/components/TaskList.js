@@ -22,7 +22,7 @@ const TaskList = () => {
   return (
     <div className="main-taskList">
       <TaskForm sendTask={addTask}/>
-      <div className="container-tasks">
+      <div className="container-main-tasks">
         {tasks.map((task) => {
           return (
             <Task

@@ -15,7 +15,7 @@
   align-items: center;
   display: grid;
   grid-template-rows: 110px 5fr;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "header" "main";
 }
 .App header {
   grid-area: header;
@@ -25,8 +25,8 @@
   align-items: center;
 }
 .App header .logo {
-  width: 75px;
-  height: 75px;
+  width: 60px;
+  height: auto;
   margin-left: 20px;
 }
 .App header .title-App {
@@ -44,13 +44,13 @@
   background-color: #fff;
   justify-self: flex-end;
   z-index: 1;
-}
-.App main .title-taskList {
-  color: #df4f4f;
-  font-size: 1.3em;
-  font-weight: 200;
-  margin-top: 30px;
-  margin-left: 25px;
+  /* .title-taskList {
+    color: #df4f4f;
+    font-size: 1.3em;
+    font-weight: 200;
+    margin-top: 30px;
+    margin-left: 25px
+  } */
 }
 .App footer {
   position: fixed;
@@ -89,7 +89,7 @@
   justify-content: center;
 }
 .App footer .bg-footer-1 .social-footer .name-footer {
-  height: 50%;
+  height: 30%;
   color: rgba(255, 255, 255, 0.2823529412);
   font-size: 1em;
   display: flex;
@@ -99,6 +99,7 @@
   width: 100%;
   height: 50%;
   display: flex;
+  align-items: center;
 }
 .App footer .bg-footer-1 .social-footer .container-social .github {
   width: 50%;
@@ -135,27 +136,76 @@
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
-  .app {
+  .App {
     grid-template-rows: 1fr 5fr 90px;
   }
-  .app header {
+  .App header {
     padding: 2vw 0;
   }
-  .app header .app-logo {
+  .App header .logo {
     width: 100px;
     height: 100px;
     transition: transform 0.3s ease;
   }
-  .app header .app-logo:hover {
+  .App header .logo:hover {
     cursor: pointer;
     transform: scale(1.3);
     background-image: url(../assets/images/logo_ok.png);
   }
-  .app header .app-logo:active {
+  .App header .logo:active {
     background-image: url(../assets/images/logo_active.png);
   }
-  .app main {
+  .App main {
     padding: 0 3vw;
+  }
+}
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+  .App {
+    height: 100vh;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 90px 6fr 1fr;
+    align-items: unset;
+  }
+  .App header .logo {
+    width: 70px;
+    height: auto;
+  }
+  .App main {
+    height: 100%;
+    overflow: hidden;
+  }
+  .App footer {
+    position: relative;
+    bottom: 0;
+    grid-area: footer;
+  }
+  .App footer .bg-footer-1 {
+    position: relative;
+  }
+  .App footer .bg-footer-1 .social-footer {
+    width: 30%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .App footer .bg-footer-1 .social-footer .name-footer {
+    width: 50%;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social {
+    width: 50%;
+    justify-content: flex-start;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social .github {
+    justify-content: flex-start;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social .github .icon-gh {
+    margin-left: 0;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social .linkedin {
+    justify-content: flex-start;
+  }
+  .App .bg-footer-2 {
+    display: none;
   }
 }
 /* ***** Colors ***** */
@@ -165,12 +215,13 @@
   position: relative;
   width: 100%;
   height: 60px;
-  border-radius: 0 15px 15px 0;
-  margin-top: 30px;
+  margin-bottom: 15px;
+  border-radius: 0 25px 25px 0;
   background-color: rgba(25, 67, 80, 0.062745098);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #e28f8f;
 }
 .task .date-form {
   position: absolute;
@@ -197,18 +248,18 @@
   font-family: "Rajdhani", sans-serif;
 }
 .task .title-task {
-  width: 90%;
+  width: 75%;
   color: #194350;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 500;
   margin: 15px;
   overflow-wrap: anywhere;
 }
 .task .icon-delete-task {
-  width: 10%;
+  width: 25%;
   height: 100%;
-  border-radius: 0 15px 15px 0;
-  background-color: #df7979;
+  border-radius: 0 25px 25px 0;
+  background-color: #e28f8f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,32 +269,56 @@
   fill: #fff;
 }
 
+/* ************************ Media Query 540px *************************/
+@media screen and (min-width: 540px) {
+  .task {
+    width: 90%;
+  }
+  .task .date-form {
+    position: relative;
+    left: 0;
+  }
+}
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+  .task {
+    width: 90%;
+    height: 50px;
+  }
+  .task .date-form {
+    position: relative;
+    left: 0;
+  }
+}
 /* ***** Colors ***** */
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
 .form {
   width: 100%;
   margin-left: 6vw;
+}
+.form .container-input-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.form .input-form {
+.form .container-input-btn .input-form {
   width: 100%;
   height: 50px;
   font-size: 1em;
   color: #476b75;
   padding: 0 20px;
-  border-radius: 15px 0 0 15px;
+  border-radius: 20px 0 0 20px;
   border: none;
   margin-top: 50px;
-  background-color: #f7e8e5;
+  background: rgb(255, 249, 198);
+  background: linear-gradient(90deg, #fcf4c2 0%, #f89d9d 100%);
 }
-.form .input-form:focus {
+.form .container-input-btn .input-form:focus {
   outline: none;
-  background-color: #fdc6be;
+  background: linear-gradient(90deg, #fcf4c2, #df7979 100%);
 }
-.form .btn-form {
+.form .container-input-btn .btn-form {
   color: #84b3bb;
   font-size: 1.2em;
   font-weight: 400;
@@ -253,20 +328,92 @@
   margin-top: 10px;
   background-color: #194350;
 }
+.form .container-input-btn .btn-form:active {
+  background-color: #36768b;
+  transform: scale(0.9);
+}
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
-  .form .input-form:hover {
+  .form {
+    margin-left: 0;
+  }
+  .form .container-input-btn .input-form:hover {
     background-color: #f8d8d2;
+  }
+}
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+  .form {
+    position: relative;
+    width: 50%;
+    height: auto;
+  }
+  .form .input-form {
+    width: 80%;
+  }
+  .form .container-input-btn {
+    width: 35%;
+    margin-left: 3vw;
+    position: fixed;
+  }
+  .form .container-input-btn .input-form {
+    width: 100%;
   }
 }
 /* ***** Colors ***** */
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
 .main-taskList {
-  margin-bottom: 100px;
+  height: 100%;
+  position: relative;
+  margin-bottom: 80px;
+}
+.main-taskList .container-main-tasks {
+  margin-top: 25px;
 }
 
+/* ************************ Media Query 540px *************************/
+@media screen and (min-width: 540px) {
+  .main-taskList {
+    margin-bottom: 10px;
+  }
+}
+/* ************************ Media Query < 1080px *************************/
+@media screen and (min-width: 1080px) {
+  .main-taskList {
+    display: flex;
+    overflow-y: scroll;
+  }
+  .main-taskList::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  .main-taskList::-webkit-scrollbar:vertical {
+    width: 10px;
+  }
+  .main-taskList ::-webkit-scrollbar-button:increment, .main-taskList .contenedor::-webkit-scrollbar-button {
+    display: none;
+  }
+  .main-taskList::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+  .main-taskList ::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+  .main-taskList .contenedor::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  .main-taskList .container-main-tasks {
+    margin-top: 30px;
+  }
+  .main-taskList .container-main-tasks {
+    width: 50%;
+    height: auto;
+    margin-top: 50px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
