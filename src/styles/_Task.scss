@@ -10,8 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #e28f8f;
-
+  background-color: #ffdbbe;
+  
   .date-form {
     position: absolute;
     left: -35px;
@@ -36,28 +36,47 @@
       font-family: 'Rajdhani', sans-serif;
     }
   };
+  
   .title-task {
-    width: 75%;
+    width: 100%;
+    height: 100%;
     color: #194350;
     font-size: 1em;
     font-weight: 500;
-    margin: 15px;
+    padding-left: 15px;
     overflow-wrap: anywhere;
+    display: flex;
+    align-items: center
   };
+  .completed {
+    color: #5a747c;
+    text-decoration: line-through 1px;
+    text-decoration-color: red;
+  };
+  .bg-completed {
+    background: linear-gradient(90deg, #d7fcb3 0%, #d7fcb3 100%);
+    background-color: #c8f59b;
+  }
+
   .icon-delete-task {
     width: 25%;
     height: 100%;
     border-radius: 0 25px 25px 0;
-    background-color: #e28f8f;
+    background-color: #ffdbbe;    
     display: flex;
     justify-content: center;
     align-items: center;
     .icon {
       font-size: 30px;
-      fill: #fff;
+      fill: #2a778f;      
+      &:active {
+        transform: scale(.9);
+        fill: #a51f1f;
+      };
     };
   };
 };
+
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
@@ -74,12 +93,37 @@
 /* ************************ Media Query < 1080px *************************/
 @media screen and (min-width: 1080px) {
 
-    .task {
-      width: 90%;
-      height: 50px;
-      .date-form {
-        position: relative;
-        left: 0;
-      }
+  .task {
+    width: 90%;
+    height: 50px;
+    &:hover {
+      cursor: pointer;
     };
+
+    .date-form {
+      position: relative;
+      left: 0;
+      .dayDate {
+        color: #a3a3a3;
+      };
+      .monthDate {
+        color: #a3a3a3;
+      };
+    };
+    .bg-date-completed {
+      background-color: #d7fcb3;
+    };
+    .icon-delete-task {
+      .icon {
+        &:hover {
+          transform: scale(1.2);
+          fill: #eb6b6b;
+        };
+        &:active {
+          transform: scale(.9);
+          fill: #a51f1f;
+        };
+      };
+    };
+  };
 };

@@ -17,7 +17,17 @@ const TaskList = () => {
   const deleteTask = (id) => {
     const updatedTask = tasks.filter((task) => task.id !== id);
     setTasks(updatedTask);
-  }
+  };
+
+  const completedTask = (id) => {
+    const updates = tasks.map(task =>{
+      if (task.id === id) {
+        task.completed = !task.completed
+      };
+      return task;
+    });
+    setTasks(updates);
+  };
 
   return (
     <div className="main-taskList">
@@ -33,6 +43,7 @@ const TaskList = () => {
               monthDate={task.monthDate}
               completed={task.completed}
               deleteTask={deleteTask}
+              completedTask={completedTask}
             />
           )
         })}
