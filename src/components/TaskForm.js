@@ -39,7 +39,7 @@ const TaskForm = ({sendTask}) => {
       <div className="container-input-btn">
         <input
           className="input-form"
-          maxLength="40"
+          maxLength="50"
           type="text"
           name="text"
           placeholder="Write your task..."

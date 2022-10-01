@@ -1,11 +1,18 @@
 
-|<img width="90" src="./src/assets/images/logo.svg">|<h1>TASK APP</h1> |
+|<img width="90" src="./src/assets/images/logo.png">|<h1>TASK APP</h1> |
 | :---: | :---: |
 
 
-App to create tasks made with React and mobile first layout.
+App to create tasks made with React CRA.
 
 <br>
+<div>
+  <img width="120" src="./src/assets/images/mobile.jpg">
+  <img width="334.7" src="./src/assets/images/tablet.jpg">
+</div>
+<img width="460" src="./src/assets/images/descktop.jpg">
+
+Made with the mobile first design concept
 
 ## Technologies used
 
@@ -16,74 +23,56 @@ App to create tasks made with React and mobile first layout.
 <br>
 
 ---
+##  How to run App Task
 
-## Getting Started with Create React App
+First copy the HTTPS address from Github.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+|![HTTPS Address](https://media.discordapp.net/attachments/997992289425182791/1025908954821308507/unknown.png)
 
-### Available Scripts
+Then we should position ourselves in the directory we want our folder to be downloaded
 
-In the project directory, you can run:
+Next, clone our repository using git clone + the HTTPS address.
+Type in the Git terminal:
 
-#### `npm start`
+```
+https://github.com/saveasfabri/task-app.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A folder will be created, access it by typing the following line in the terminal:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+cd task-app
+```
 
-#### `npm test`
+After that, you should install all dependencies for it to work properly running the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+```
 
-#### `npm run build`
+If you do not wish to install them globally and to reduce long time issues you may also run:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npx install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###### Now you simply must enter
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm start
+```
 
-#### `npm run eject`
+Then the app should start running smoothly without any issues.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Success!!!!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<div>
+  <img width="90" src="https://github.com/saveasfabri.png">
+  
+</div>
+Fabricio Hang
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-#### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-#### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-#### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-#### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-#### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-#### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://www.linkedin.com/in/fabricioahang/">See on LinkedIn</a>
