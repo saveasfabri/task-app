@@ -23,11 +23,13 @@
     display: flex;
     align-items: center;
 
-    .logo {
-      width: 60px;
-      height: auto;
-      margin-left: 20px; 
-    };
+    .container-logo-header {
+      .logo {
+        width: 70px;
+        height: auto;
+        margin-left: 20px; 
+      };
+    }    
     .title-App {
       color: #fff;
       font-family: 'Rajdhani', sans-serif;
@@ -39,18 +41,10 @@
     grid-area: main;
     width: 85%;
     height: 100%;
-    padding: 0 6vw 0 0;
     border-radius: 40px 0 0 0 ;
     background-color: #fff;
     justify-self: flex-end;
     z-index: 1;
-    /* .title-taskList {
-      color: #df4f4f;
-      font-size: 1.3em;
-      font-weight: 200;
-      margin-top: 30px;
-      margin-left: 25px
-    } */
   };
   footer{
     position: fixed;
@@ -70,16 +64,18 @@
       height: 100%;
       border-radius: 35px 0 0 35px;
       background-color: #194350;
-      box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.699);
+      box-shadow: 0px 4px 8px #252525b2;
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      .logo-footer {
-        width: 55px;
-        height: 55px;
-        margin-left: 12px
-      };
+      .container-logo-footer {
+        width: 50%;
+        .logo-footer {
+          width: 55px;
+          height: 55px;
+          margin-left: 12px
+        };
+      };      
       .social-footer {
         width: 50%;
         height: 100%;
@@ -89,79 +85,128 @@
         justify-content: center;
 
         .name-footer {
-          height: 30%;
+          font-style: italic;
+          width: 100%;
+          height: 50%;
           color: #ffffff48;
           font-size: 1em;
           display: flex;
           align-items: center;
+          justify-content: center
         };
         .container-social {
           width: 100%;
           height: 50%;
           display:flex;
-          align-items: center;
-          .github {
-            width: 50%;
+          align-items: flex-start;
+          justify-content: center;
+          .github, .linkedin {
+            width: 40%;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            .icon-gh {
+            align-items: center;
+            .icon-gh, .icon-lk {
               font-size: 1.7em;
-              fill: #568a93;
-              margin-left: 20px;
+              fill: #568a93;              
             }
-          }
-          .linkedin {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            .icon-lk {
-              font-size: 1.7em;
-              fill: #568a93;
-              margin-right: 20px;
-            }
-          }
+            svg {
+              &:active {
+                fill: #194350;
+                font-size: 1.3em;
+              }
+            };
+          };         
         };
       };
     };    
-  };
-  .bg-footer-2 {//para lograr somgra bajo el main
-    position: fixed;
-    width: 94%;
-    height: 74px;
-    bottom: 15px;
-    border-radius: 35px 0 0 35px;
-    justify-self: flex-end;
-    align-self: flex-start;
-    background-color: #9b2d14;
-    box-shadow: -6px 6px 6px rgba(133, 36, 36, 0.438);
-  };
+  };  
 };
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
   .App {
+
+    width: 100%;
     grid-template-rows: 1fr 5fr 90px;
     
     header {
       padding: 2vw 0;
 
-      .logo {
-        width: 100px;
-        height: 100px;
-        transition: transform .3s ease;
-        &:hover {
-          cursor: pointer;
-          transform:scale(1.3);
-          background-image: url(../assets/images/logo_ok.png);
+      .container-logo-header {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .logo {
+          width: 80%;
+          height: 80%;
+          margin-left: 0;
+          transition: transform .3s ease;
+          &:hover {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            cursor: pointer;
+            transform: rotate(360deg);
+          };
+          &:active {
+            transform: scale(.9);
+            filter:grayscale(.7);
+          };
+        };        
+      }
+      .title-App {
+        margin-left: 10px;
+      }      
+    };
+    footer {
+      .bg-footer-1 {
+        .container-logo-footer {
+          width: 50%;
+          margin-left: 12px;
+          .logo-footer {            
+            width: 55px;
+            height: 55px;
+            margin-left: 0;
+            cursor: pointer;
+            transition: transform .3s ease;
+            &:hover {
+              transform: rotate(360deg);
+            };
+            &:active {
+              transform: scale(.9);
+              filter:grayscale(.7);
+            };
+          };
         };
-        &:active {
-          background-image: url(../assets/images/logo_active.png);
+        .social-footer {
+          width: 30%;
+          .container-social {
+            width: 50%;
+            justify-content: center;
+            align-items: flex-start;
+            .github, .linkedin {
+              width: 50%;
+              justify-content: center;
+              align-items: center; 
+              cursor: auto;
+              .icon-gh, .icon-lk {
+                margin-left: 0;
+                cursor: pointer;
+              }
+              svg{
+                &:hover {
+                  transform: scale(1.2);
+                  filter: brightness(1.5);              
+                };
+              };
+            };
+          };
         };
       };
-    };
-    main {
-      padding: 0 3vw;
     };
   };
 };
@@ -182,7 +227,7 @@
       .logo {
         width: 70px;
         height: auto;
-      }
+      };
     };
     main {
       height: 100%;
@@ -205,22 +250,10 @@
           .container-social {
             width: 50%;
             justify-content: flex-start;
-            .github {
-              justify-content: flex-start;
-              .icon-gh {
-                margin-left: 0
-              }
-            };
-            .linkedin {
-              justify-content: flex-start
-            }
+            align-items: center;            
           };
-
-        }
+        };
       };
     };
-    .bg-footer-2 {
-      display: none
-    }
   };  
 };

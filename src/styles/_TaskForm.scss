@@ -1,7 +1,6 @@
 @import "variables";
 
 .form {
-  width: 100%;
   margin-left: 6vw;    
   .container-input-btn {
     display: flex;
@@ -33,6 +32,7 @@
       color: #a1d3db;
       padding: 10px 30px;
       border: none;
+      box-shadow: 0px 2px 6px #4b4b4bb2;
       border-radius: 30px;    
       margin-top: 10px;
       background-color: #2c748a;
@@ -41,6 +41,7 @@
       &:active {
         font-size: 0.9em;
         color: #649299;
+        box-shadow: none;
       }
     };
   };
@@ -49,9 +50,9 @@
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
   .form {
-    margin-left: 0;
     .container-input-btn {
       .input-form {
+        height: 50px;
         &:hover {
           background-color: #f8d8d2;
         };
@@ -81,7 +82,7 @@
         padding: 10px 40px;
         border: none;
         border-radius: 30px;    
-        margin-top: 15px;
+        margin-top: 15px;        
         
         &:hover {
           color: #fff;

@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img className="logo" src={logo} alt="logo" />
+        <div className='container-logo-header'>
+          <img className="logo" src={logo} alt="logo" />
+        </div>
         <h1 className='title-App'>TASK APP</h1>
       </header>
 
@@ -20,9 +22,11 @@ function App() {
 
       <footer>
         <div className="bg-footer-1">
-          <img className="logo-footer" src={logoFooter} alt="logo footer" />
+          <div className='container-logo-footer'>
+            <img className="logo-footer" src={logoFooter} alt="logo footer" />
+          </div>
           <div className='social-footer'>
-            <p className='name-footer'>Dev Fabricio Hang</p>
+            <p className='name-footer'>Created by FH</p>
             <div className='container-social'>
               <a className='github' href={'https://github.com/saveasfabri/task-app'} target="_blank" rel="noopener noreferrer">
                 <SiGithub className='icon-gh'/>
@@ -34,8 +38,6 @@ function App() {
           </div>
         </div>
       </footer>
-
-      <div className="bg-footer-2"/>
     </div>
   );
 }

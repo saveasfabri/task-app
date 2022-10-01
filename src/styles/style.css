@@ -24,8 +24,8 @@
   display: flex;
   align-items: center;
 }
-.App header .logo {
-  width: 60px;
+.App header .container-logo-header .logo {
+  width: 70px;
   height: auto;
   margin-left: 20px;
 }
@@ -39,18 +39,10 @@
   grid-area: main;
   width: 85%;
   height: 100%;
-  padding: 0 6vw 0 0;
   border-radius: 40px 0 0 0;
   background-color: #fff;
   justify-self: flex-end;
   z-index: 1;
-  /* .title-taskList {
-    color: #df4f4f;
-    font-size: 1.3em;
-    font-weight: 200;
-    margin-top: 30px;
-    margin-left: 25px
-  } */
 }
 .App footer {
   position: fixed;
@@ -70,12 +62,15 @@
   height: 100%;
   border-radius: 35px 0 0 35px;
   background-color: #194350;
-  box-shadow: 0px 6px 8px rgba(87, 87, 87, 0.699);
+  box-shadow: 0px 4px 8px rgba(37, 37, 37, 0.6980392157);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.App footer .bg-footer-1 .logo-footer {
+.App footer .bg-footer-1 .container-logo-footer {
+  width: 50%;
+}
+.App footer .bg-footer-1 .container-logo-footer .logo-footer {
   width: 55px;
   height: 55px;
   margin-left: 12px;
@@ -89,74 +84,114 @@
   justify-content: center;
 }
 .App footer .bg-footer-1 .social-footer .name-footer {
-  height: 30%;
+  font-style: italic;
+  width: 100%;
+  height: 50%;
   color: rgba(255, 255, 255, 0.2823529412);
   font-size: 1em;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .App footer .bg-footer-1 .social-footer .container-social {
   width: 100%;
   height: 50%;
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.App footer .bg-footer-1 .social-footer .container-social .github, .App footer .bg-footer-1 .social-footer .container-social .linkedin {
+  width: 40%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.App footer .bg-footer-1 .social-footer .container-social .github {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.App footer .bg-footer-1 .social-footer .container-social .github .icon-gh {
+.App footer .bg-footer-1 .social-footer .container-social .github .icon-gh, .App footer .bg-footer-1 .social-footer .container-social .github .icon-lk, .App footer .bg-footer-1 .social-footer .container-social .linkedin .icon-gh, .App footer .bg-footer-1 .social-footer .container-social .linkedin .icon-lk {
   font-size: 1.7em;
   fill: #568a93;
-  margin-left: 20px;
 }
-.App footer .bg-footer-1 .social-footer .container-social .linkedin {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-.App footer .bg-footer-1 .social-footer .container-social .linkedin .icon-lk {
-  font-size: 1.7em;
-  fill: #568a93;
-  margin-right: 20px;
-}
-.App .bg-footer-2 {
-  position: fixed;
-  width: 94%;
-  height: 74px;
-  bottom: 15px;
-  border-radius: 35px 0 0 35px;
-  justify-self: flex-end;
-  align-self: flex-start;
-  background-color: #9b2d14;
-  box-shadow: -6px 6px 6px rgba(133, 36, 36, 0.438);
+.App footer .bg-footer-1 .social-footer .container-social .github svg:active, .App footer .bg-footer-1 .social-footer .container-social .linkedin svg:active {
+  fill: #194350;
+  font-size: 1.3em;
 }
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
   .App {
+    width: 100%;
     grid-template-rows: 1fr 5fr 90px;
   }
   .App header {
     padding: 2vw 0;
   }
-  .App header .logo {
-    width: 100px;
-    height: 100px;
+  .App header .container-logo-header {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .App header .container-logo-header .logo {
+    width: 80%;
+    height: 80%;
+    margin-left: 0;
     transition: transform 0.3s ease;
   }
-  .App header .logo:hover {
+  .App header .container-logo-header .logo:hover {
+    position: absolute;
+    width: 110px;
+    height: 110px;
     cursor: pointer;
-    transform: scale(1.3);
-    background-image: url(../assets/images/logo_ok.png);
+    transform: rotate(360deg);
   }
-  .App header .logo:active {
-    background-image: url(../assets/images/logo_active.png);
+  .App header .container-logo-header .logo:active {
+    transform: scale(0.9);
+    filter: grayscale(0.7);
   }
-  .App main {
-    padding: 0 3vw;
+  .App header .title-App {
+    margin-left: 10px;
+  }
+  .App footer .bg-footer-1 .container-logo-footer {
+    width: 50%;
+    margin-left: 12px;
+  }
+  .App footer .bg-footer-1 .container-logo-footer .logo-footer {
+    width: 55px;
+    height: 55px;
+    margin-left: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .App footer .bg-footer-1 .container-logo-footer .logo-footer:hover {
+    transform: rotate(360deg);
+  }
+  .App footer .bg-footer-1 .container-logo-footer .logo-footer:active {
+    transform: scale(0.9);
+    filter: grayscale(0.7);
+  }
+  .App footer .bg-footer-1 .social-footer {
+    width: 30%;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social {
+    width: 50%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social .github, .App footer .bg-footer-1 .social-footer .container-social .linkedin {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: auto;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social .github .icon-gh, .App footer .bg-footer-1 .social-footer .container-social .github .icon-lk, .App footer .bg-footer-1 .social-footer .container-social .linkedin .icon-gh, .App footer .bg-footer-1 .social-footer .container-social .linkedin .icon-lk {
+    margin-left: 0;
+    cursor: pointer;
+  }
+  .App footer .bg-footer-1 .social-footer .container-social .github svg:hover, .App footer .bg-footer-1 .social-footer .container-social .linkedin svg:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
   }
 }
 /* ************************ Media Query < 1080px *************************/
@@ -194,18 +229,7 @@
   .App footer .bg-footer-1 .social-footer .container-social {
     width: 50%;
     justify-content: flex-start;
-  }
-  .App footer .bg-footer-1 .social-footer .container-social .github {
-    justify-content: flex-start;
-  }
-  .App footer .bg-footer-1 .social-footer .container-social .github .icon-gh {
-    margin-left: 0;
-  }
-  .App footer .bg-footer-1 .social-footer .container-social .linkedin {
-    justify-content: flex-start;
-  }
-  .App .bg-footer-2 {
-    display: none;
+    align-items: center;
   }
 }
 /* ***** Colors ***** */
@@ -293,8 +317,27 @@
     width: 90%;
   }
   .task .date-form {
-    position: relative;
-    left: 0;
+    left: -8%;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .task .date-form .dayDate {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: "Rajdhani", sans-serif;
+    border-bottom: 2px solid #194350;
+  }
+  .task .date-form .monthDate {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: "Rajdhani", sans-serif;
   }
 }
 /* ************************ Media Query < 1080px *************************/
@@ -332,7 +375,6 @@
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
 .form {
-  width: 100%;
   margin-left: 6vw;
 }
 .form .container-input-btn {
@@ -371,6 +413,7 @@
   color: #a1d3db;
   padding: 10px 30px;
   border: none;
+  box-shadow: 0px 2px 6px rgba(75, 75, 75, 0.6980392157);
   border-radius: 30px;
   margin-top: 10px;
   background-color: #2c748a;
@@ -379,12 +422,13 @@
 .form .container-input-btn .btn-form:active {
   font-size: 0.9em;
   color: #649299;
+  box-shadow: none;
 }
 
 /* ************************ Media Query 540px *************************/
 @media screen and (min-width: 540px) {
-  .form {
-    margin-left: 0;
+  .form .container-input-btn .input-form {
+    height: 50px;
   }
   .form .container-input-btn .input-form:hover {
     background-color: #f8d8d2;
@@ -429,6 +473,7 @@
   margin-bottom: 80px;
 }
 .main-taskList .container-main-tasks {
+  width: 92%;
   margin-top: 25px;
 }
 
@@ -436,6 +481,9 @@
 @media screen and (min-width: 540px) {
   .main-taskList {
     margin-bottom: 10px;
+  }
+  .main-taskList .container-main-tasks {
+    width: 100%;
   }
 }
 /* ************************ Media Query < 1080px *************************/
