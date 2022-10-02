@@ -5,7 +5,7 @@
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background-color: #f3863e;
+  background-color: $bg-orange;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,15 @@
   grid-template-areas: 
   "header"
   "main";
+  .net-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/images/net.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .2;
+  }
 
 
   header {
@@ -42,14 +51,17 @@
     width: 85%;
     height: 100%;
     border-radius: 40px 0 0 0 ;
-    background-color: #fff;
+    background-color: $bg-white;
+    outline-color: #cacaca65;
+    outline-width: 5px;
+    outline-style: outset;
     justify-self: flex-end;
     z-index: 1;
   };
   footer{
     position: fixed;
     width: 95%;
-    height: 75px;
+    height: 65px;
     bottom: 15px;
     border-radius: 15px 0 0 15px;
     justify-self: flex-end;
@@ -63,17 +75,22 @@
       width: 100%;
       height: 100%;
       border-radius: 35px 0 0 35px;
-      background-color: #194350;
+      background-image: url(../assets/images/net2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      background-color: $bg-blue;
       box-shadow: 0px 4px 8px #252525b2;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-between;      
+
       .container-logo-footer {
+        display: flex;
         width: 50%;
         .logo-footer {
           width: 55px;
           height: 55px;
-          margin-left: 12px
+          margin-left: 5px
         };
       };      
       .social-footer {
@@ -88,7 +105,7 @@
           font-style: italic;
           width: 100%;
           height: 50%;
-          color: #ffffff48;
+          color: #ffffff63;
           font-size: 1em;
           display: flex;
           align-items: center;
@@ -111,13 +128,13 @@
             }
             svg {
               &:active {
-                fill: #194350;
+                fill: $bg-blue;
                 font-size: 1.3em;
               }
             };
           };         
         };
-      };
+      };      
     };    
   };  
 };
@@ -127,7 +144,7 @@
   .App {
 
     width: 100%;
-    grid-template-rows: 1fr 5fr 90px;
+    grid-template-rows: 120px 5fr 90px;
     
     header {
       padding: 2vw 0;
@@ -166,7 +183,7 @@
       .bg-footer-1 {
         .container-logo-footer {
           width: 50%;
-          margin-left: 12px;
+          margin-left: 5px;
           .logo-footer {            
             width: 55px;
             height: 55px;
@@ -220,7 +237,7 @@
     "header"
     "main"
     "footer";
-    grid-template-rows: 90px 6fr 1fr;
+    grid-template-rows: 120px 6fr 1fr;
     align-items:unset;
 
     header {

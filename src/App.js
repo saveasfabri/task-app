@@ -9,6 +9,7 @@ import logoFooter from "./assets/images/logo_footer.png"
 function App() {
   return (
     <div className="App">
+      <div className='net-bg' />
       <header>
         <div className='container-logo-header'>
           <img className="logo" src={logo} alt="logo" />
@@ -22,6 +23,7 @@ function App() {
 
       <footer>
         <div className="bg-footer-1">
+          
           <div className='container-logo-footer'>
             <img className="logo-footer" src={logoFooter} alt="logo footer" />
           </div>

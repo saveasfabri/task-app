@@ -2,8 +2,10 @@
 /* ***** Colors ***** */
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
+/* ***** Backgrounds ***** */
 /* ***** Colors ***** */
 /* ***** text ***** */
+/* ***** Backgrounds ***** */
 /* ***** Backgrounds ***** */
 .App {
   position: relative;
@@ -16,6 +18,15 @@
   display: grid;
   grid-template-rows: 110px 5fr;
   grid-template-areas: "header" "main";
+}
+.App .net-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/net.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
 }
 .App header {
   grid-area: header;
@@ -40,14 +51,17 @@
   width: 85%;
   height: 100%;
   border-radius: 40px 0 0 0;
-  background-color: #fff;
+  background-color: #ffffff;
+  outline-color: rgba(202, 202, 202, 0.3960784314);
+  outline-width: 5px;
+  outline-style: outset;
   justify-self: flex-end;
   z-index: 1;
 }
 .App footer {
   position: fixed;
   width: 95%;
-  height: 75px;
+  height: 65px;
   bottom: 15px;
   border-radius: 15px 0 0 15px;
   justify-self: flex-end;
@@ -61,6 +75,9 @@
   width: 100%;
   height: 100%;
   border-radius: 35px 0 0 35px;
+  background-image: url(../assets/images/net2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #194350;
   box-shadow: 0px 4px 8px rgba(37, 37, 37, 0.6980392157);
   display: flex;
@@ -68,12 +85,13 @@
   justify-content: space-between;
 }
 .App footer .bg-footer-1 .container-logo-footer {
+  display: flex;
   width: 50%;
 }
 .App footer .bg-footer-1 .container-logo-footer .logo-footer {
   width: 55px;
   height: 55px;
-  margin-left: 12px;
+  margin-left: 5px;
 }
 .App footer .bg-footer-1 .social-footer {
   width: 50%;
@@ -87,7 +105,7 @@
   font-style: italic;
   width: 100%;
   height: 50%;
-  color: rgba(255, 255, 255, 0.2823529412);
+  color: rgba(255, 255, 255, 0.3882352941);
   font-size: 1em;
   display: flex;
   align-items: center;
@@ -119,7 +137,7 @@
 @media screen and (min-width: 540px) {
   .App {
     width: 100%;
-    grid-template-rows: 1fr 5fr 90px;
+    grid-template-rows: 120px 5fr 90px;
   }
   .App header {
     padding: 2vw 0;
@@ -155,7 +173,7 @@
   }
   .App footer .bg-footer-1 .container-logo-footer {
     width: 50%;
-    margin-left: 12px;
+    margin-left: 5px;
   }
   .App footer .bg-footer-1 .container-logo-footer .logo-footer {
     width: 55px;
@@ -199,7 +217,7 @@
   .App {
     height: 100vh;
     grid-template-areas: "header" "main" "footer";
-    grid-template-rows: 90px 6fr 1fr;
+    grid-template-rows: 120px 6fr 1fr;
     align-items: unset;
   }
   .App header .logo {
@@ -235,17 +253,18 @@
 /* ***** Colors ***** */
 /* ***** text ***** */
 /* ***** Backgrounds ***** */
+/* ***** Backgrounds ***** */
 .task {
   position: relative;
   width: 100%;
   height: 60px;
   margin-bottom: 15px;
   border-radius: 0 25px 25px 0;
-  background-color: rgba(25, 67, 80, 0.062745098);
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #ffdbbe;
+  box-shadow: 0px 2px 6px rgba(175, 175, 175, 0.6980392157);
 }
 .task .date-form {
   position: absolute;
@@ -259,14 +278,14 @@
   z-index: 2;
 }
 .task .date-form .dayDate {
-  color: #fff;
+  color: #ffffff;
   font-size: 1.2em;
   font-weight: 500;
   font-family: "Rajdhani", sans-serif;
   border-bottom: 2px solid #194350;
 }
 .task .date-form .monthDate {
-  color: #fff;
+  color: #ffffff;
   font-size: 1.2em;
   font-weight: 500;
   font-family: "Rajdhani", sans-serif;
@@ -286,8 +305,8 @@
   color: #5a747c;
   -webkit-text-decoration: line-through 1px;
           text-decoration: line-through 1px;
-  -webkit-text-decoration-color: red;
-          text-decoration-color: red;
+  -webkit-text-decoration-color: #ff0000;
+          text-decoration-color: #ff0000;
 }
 .task .bg-completed {
   background: linear-gradient(90deg, #d7fcb3 0%, #d7fcb3 100%);
@@ -297,7 +316,6 @@
   width: 25%;
   height: 100%;
   border-radius: 0 25px 25px 0;
-  background-color: #ffdbbe;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,17 +345,25 @@
     z-index: 2;
   }
   .task .date-form .dayDate {
-    color: #fff;
+    color: #ffffff;
     font-size: 1.2em;
     font-weight: 500;
     font-family: "Rajdhani", sans-serif;
     border-bottom: 2px solid #194350;
   }
   .task .date-form .monthDate {
-    color: #fff;
+    color: #ffffff;
     font-size: 1.2em;
     font-weight: 500;
     font-family: "Rajdhani", sans-serif;
+  }
+  .task .icon-delete-task .icon:hover {
+    transform: scale(1.2);
+    fill: #eb6b6b;
+  }
+  .task .icon-delete-task .icon:active {
+    transform: scale(0.9);
+    fill: #a51f1f;
   }
 }
 /* ************************ Media Query < 1080px *************************/
@@ -354,7 +380,7 @@
     left: 0;
   }
   .task .date-form .dayDate {
-    color: #a3a3a3;
+    color: #ff6464;
   }
   .task .date-form .monthDate {
     color: #a3a3a3;
@@ -362,17 +388,10 @@
   .task .bg-date-completed {
     background-color: #d7fcb3;
   }
-  .task .icon-delete-task .icon:hover {
-    transform: scale(1.2);
-    fill: #eb6b6b;
-  }
-  .task .icon-delete-task .icon:active {
-    transform: scale(0.9);
-    fill: #a51f1f;
-  }
 }
 /* ***** Colors ***** */
 /* ***** text ***** */
+/* ***** Backgrounds ***** */
 /* ***** Backgrounds ***** */
 .form {
   margin-left: 6vw;
@@ -391,7 +410,8 @@
   border-radius: 20px 0 0 20px;
   border: none;
   margin-top: 50px;
-  background: rgb(255, 249, 198);
+  box-shadow: 0px 2px 6px rgba(175, 175, 175, 0.6980392157);
+  background: #fff9c6;
   background: linear-gradient(90deg, #fcf4c2 0%, #ffdbbe 100%);
   cursor: pointer;
 }
@@ -413,9 +433,13 @@
   color: #a1d3db;
   padding: 10px 30px;
   border: none;
-  box-shadow: 0px 2px 6px rgba(75, 75, 75, 0.6980392157);
+  box-shadow: 0px 2px 6px rgba(99, 99, 99, 0.6980392157);
   border-radius: 30px;
   margin-top: 10px;
+  background-image: url(../assets/images/net2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-color: #2c748a;
   cursor: pointer;
 }
@@ -453,6 +477,7 @@
     width: 100%;
   }
   .form .container-input-btn .btn-form {
+    position: relative;
     font-size: 1.1em;
     padding: 10px 40px;
     border: none;
@@ -460,12 +485,13 @@
     margin-top: 15px;
   }
   .form .container-input-btn .btn-form:hover {
-    color: #fff;
+    color: #ffffff;
     background-color: #49afbe;
   }
 }
 /* ***** Colors ***** */
 /* ***** text ***** */
+/* ***** Backgrounds ***** */
 /* ***** Backgrounds ***** */
 .main-taskList {
   height: 100%;

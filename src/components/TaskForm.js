@@ -46,7 +46,7 @@ const TaskForm = ({sendTask}) => {
           onChange={handleChange}
         />
         <button className="btn-form">Add Task</button>
-        </div>
+      </div>
     </form>
   );
 };
